@@ -3,7 +3,7 @@ import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/
 import { server } from './mcp-server.js'
 
 const app = express()
-const port = 3000
+const port = process.env.PORT ||  3000;
 app.get('/health', (req, res) => res.send('OK'))
 app.post('/mcp', async (req, res) => {
     const transport = new StreamableHTTPServerTransport({

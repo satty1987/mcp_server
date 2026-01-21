@@ -41,7 +41,7 @@ Example curl (initialize):
 
 ```bash
 curl --location 'http://localhost:3000/mcp' \
---header 'Content-Type: application/json;' \
+--header 'Content-Type: application/json' \
 --header 'Accept: application/json, text/event-stream' \
 --data '{
   "jsonrpc": "2.0",
